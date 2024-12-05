@@ -36,6 +36,57 @@ export default function Projects() {
     getRepoData();
   }, []);
 
+<<<<<<< HEAD
+=======
+  function getRepoData() {
+    const client = new ApolloClient({
+      uri: "https://api.github.com/graphql",
+      request: operation => {
+        operation.setContext({
+          headers: {
+            authorization: `Bearer ${atob("YOUR CONVERTED GITHUB TOKEN")}`
+          }
+        });
+      }
+    });
+
+    client
+      .query({
+        query: gql`
+          {
+            repositoryOwner(login: "your github username") {
+              ... on User {
+                pinnedRepositories(first: 6) {
+                  edges {
+                    node {
+                      nameWithOwner
+                      description
+                      forkCount
+                      stargazers {
+                        totalCount
+                      }
+                      url
+                      id
+                      diskUsage
+                      primaryLanguage {
+                        name
+                        color
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        `
+      })
+      .then(result => {
+        setrepoFunction(result.data.repositoryOwner.pinnedRepositories.edges);
+        console.log(result);
+      });
+  }
+
+>>>>>>> a592bc5 (Update Projects.js)
   function setrepoFunction(array) {
     setrepo(array);
   }
