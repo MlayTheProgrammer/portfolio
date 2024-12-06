@@ -25,8 +25,8 @@ const greeting = {
   subTitle: emoji(
     "A dedicated Software Engineer 🚀 with strong expertise in developing innovative web, mobile, and AI-driven solutions. Experienced in Java, Python, React, Angular, and C# to create impactful, high-quality software applications."
   ),
-  resumeLink: "https://www.dropbox.com/scl/fi/9qf8bsm69mfbi9zeel49d/RichardMlay-SoftwareEngineer.pdf?rlkey=zf7w1oy9ri8fczco8i9vb5n7u&st=iryiipkp&dl=0"
-  displayGreeting: true // Display this section
+  resumeLink: "https://www.dropbox.com/scl/fi/9qf8bsm69mfbi9zeel49d/RichardMlay-SoftwareEngineer.pdf?rlkey=zf7w1oy9ri8fczco8i9vb5n7u&st=iryiipkp&dl=0",
+  display: true // Display this sectiond
 };
 
 // Social Media Links
@@ -195,11 +195,6 @@ const contactInfo = {
 
 // Twitter Section
 
-const twitterDetails = {
-  userName: "twitter", //Replace "twitter" with your twitter username without @
-  display: false // Set true to display this section, defaults to false
-};
-
 const isHireable = true; // Set false if you are not looking for a job. Also isHireable will be display as Open for opportunities: Yes/No in the GitHub footer
 
 export {
@@ -209,16 +204,9 @@ export {
   splashScreen,
   skillsSection,
   educationInfo,
-  techStack,
   workExperiences,
-  openSource,
   bigProjects,
-  achievementSection,
-  blogSection,
-  talkSection,
-  podcastSection,
   contactInfo,
-  twitterDetails,
   isHireable,
   resumeSection
 };
